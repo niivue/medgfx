@@ -1,0 +1,37 @@
+name: PR Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build library
+        run: bun run build
+
+      - name: Run tests
+        run: bun test
+
+      - name: Check build artifacts
+        run: |
+          if [ ! -f dist/medgfx.js ]; then
+            echo "Build failed: dist/medgfx.js not found"
+            exit 1
+          fi
+          echo "Build successful: dist/medgfx.js ($(du -h dist/medgfx.js | cut -f1))"

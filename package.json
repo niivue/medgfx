@@ -1,0 +1,26 @@
+{
+  "name": "medgfx",
+  "module": "src/medgfx.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx vite",
+    "start": "bun run medgfx.ts",
+    "build": "bunx tsdown",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^19.0.2",
+    "@types/bun": "latest",
+    "tsdown": "^0.15.6",
+    "vite": "^7.1.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "array-equal": "^2.0.0",
+    "gl-matrix": "^3.4.4",
+    "pino": "^9.12.0",
+    "pino-pretty": "^13.1.1"
+  }
+}
