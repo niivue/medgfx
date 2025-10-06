@@ -1,6 +1,6 @@
-import * as cmaps from './cmaps'
-import { logger } from './logger'
-import type { ColorMap, LUT } from './types/colormap'
+import * as cmaps from '../cmaps'
+import { logger } from '../logger'
+import type { ColorMap, LUT } from '../types/colormap'
 
 /**
  * ColorTables class for managing color lookup tables (LUTs)

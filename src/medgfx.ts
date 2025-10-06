@@ -2,10 +2,6 @@ import { logger, getLogLevel, setLogLevel } from "./logger";
 import { EventManager } from "./events/event-manager";
 import type { MedGFXProps } from "./types/medgfx";
 
-// Re-export ColorTables and singleton for convenience
-export { ColorTables, colortables } from "./colortables";
-export type { ColorMap, LUT } from "./types/colormap";
-
 // Main MedGFX class
 export class MedGFX {
   // canvas element

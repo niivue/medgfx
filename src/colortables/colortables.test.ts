@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'
-import { ColorTables } from './colortables'
-import type { ColorMap } from './types/colormap'
+import { ColorTables } from '.'
+import type { ColorMap } from '../types/colormap'
 
 describe('ColorTables', () => {
   describe('constructor', () => {
