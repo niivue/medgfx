@@ -4,7 +4,6 @@
   "type": "module",
   "scripts": {
     "dev": "bunx vite",
-    "start": "bun run medgfx.ts",
     "build": "bunx tsdown",
     "test": "bun test"
   },

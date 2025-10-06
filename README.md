@@ -31,7 +31,4 @@ bun test
 
 # Build for production
 bun run build
-
-# Start application
-bun run start
 ```
