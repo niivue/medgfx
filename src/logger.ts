@@ -1,18 +1,13 @@
 import pino from "pino";
 
-// Browser transport for pino that sends logs to the UI
-const browserWrite = (logObj: object) => {
-  const event = new CustomEvent("medgfx-log", { detail: logObj });
-  window.dispatchEvent(event);
-};
+const DEFAULT_LOG_LEVEL = "debug";
 
 // Single logger instance for the entire library
 export const logger = pino({
   browser: {
     asObject: true,
-    write: browserWrite,
   },
-  level: "debug",
+  level: DEFAULT_LOG_LEVEL,
 });
 
 // Get current log level
