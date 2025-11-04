@@ -9,6 +9,7 @@ export type { PointerState, PointerEventCallback, KeyBinding } from './events'
 export type { MedGFXProps } from './medgfx'
 export type { Object3DGeometry, Object3DOptions } from './object3d'
 export type { TypedNumberArray } from './utils'
+export type { VolumeWorkerRequest, VolumeWorkerResponse, VolumeWorkerRequestType, VolumeWorkerResponseType } from './worker'
 export {
   LabelTextAlignment,
   LabelLineTerminator,
